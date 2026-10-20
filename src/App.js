@@ -1,25 +1,6 @@
 import { useState } from "react";
 
-const initialFriends = [
-  {
-    id: 118836,
-    name: "Akshay",
-    image: "https://randomuser.me/api/portraits/men/75.jpg",
-    balance: -7,
-  },
-  {
-    id: 933372,
-    name: "Dhanush",
-    image: "https://randomuser.me/api/portraits/men/76.jpg",
-    balance: 20,
-  },
-  {
-    id: 499476,
-    name: "Ullas",
-    image: "https://randomuser.me/api/portraits/men/77.jpg",
-    balance: 0,
-  },
-];
+const initialFriends = [];
 
 function Button({ children, onClick }) {
   return (
