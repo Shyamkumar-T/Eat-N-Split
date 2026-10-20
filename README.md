@@ -1,75 +1,140 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
 # Eat-N-Split
-A React-based bill-splitting app to manage friends, track balances, and split shared expenses with ease.
->>>>>>> 13d50739ad641cae247961b300cd992d381330f9
+
+A React-based bill-splitting application that helps you manage friends, split shared expenses, and track who owes whom.
+
+## Features
+
+- **Add Friends:** Add friends with their names and profile image URLs.
+- **Friend List:** View your friends and their current balances.
+- **Balance Tracking:** Identify whether you owe a friend, they owe you, or the balance is settled.
+- **Split Bills:** Enter the total bill amount and your share of the expense.
+- **Flexible Payments:** Choose whether you or your friend paid the bill.
+- **Automatic Balance Updates:** Update the selected friend's balance based on the bill split.
+- **Interactive Forms:** Open the friend-adding and bill-splitting forms when needed.
+- **Dynamic UI:** Update the interface using React state management.
+
+## Technologies Used
+
+- React
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- npm
+
+## Project Structure
+
+```text
+Eat-N-Split/
+│
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+│
+├── src/
+│   ├── App.js
+│   ├── index.css
+│   └── index.js
+│
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Shyamkumar-T/Eat-N-Split.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd Eat-N-Split
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+5. Open the local URL displayed in your terminal to use the application.
+
+## How to Use
+
+1. Launch Eat-N-Split.
+2. Click **AddFriend** to open the friend form.
+3. Enter the friend's name and image URL, then click **Add**.
+4. Click **Select** beside a friend to open the bill-splitting form.
+5. Enter the total bill amount.
+6. Enter your share of the expense.
+7. Choose who paid the bill.
+8. Click **Split Bill** to update the friend's balance.
+
+## How Balance Calculation Works
+
+The application calculates the friend's expense using:
+
+**Friend's Expense = Bill Value − Your Expense**
+
+The balance update depends on who paid the bill:
+
+- **You paid:** The friend's share is added to their balance, indicating that they owe you.
+- **Your friend paid:** Your share is subtracted from their balance, indicating that you owe them.
+
+A positive balance means your friend owes you, while a negative balance means you owe your friend. A zero balance means you are even.
+
+## React Concepts Practiced
+
+- Functional components
+- Props and component communication
+- State management with `useState`
+- Event handling and callback functions
+- Controlled form inputs
+- Conditional rendering
+- Rendering lists with `map()` and unique keys
+- Updating arrays immutably
+- Managing data between parent and child components
+
+## Future Improvements
+
+- Persist friends and balances across page refreshes.
+- Add the ability to remove friends.
+- Improve validation for bill amounts and expenses.
+- Add transaction history for each friend.
+- Improve accessibility and mobile responsiveness.
+- Enhance the interface with additional feedback and animations.
+
+## Current Limitations
+
+- Friend details and balances are stored in React state and reset when the page is refreshed.
+- The application does not currently include a backend or database.
+- Friends must be added again after refreshing the application.
+
+## Author
+
+**Shyamkumar T**
+
+## Repository
+
+[Eat-N-Split on GitHub](https://github.com/Shyamkumar-T/Eat-N-Split)
