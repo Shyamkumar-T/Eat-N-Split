@@ -83,3 +83,122 @@ li {
   width: 500px;
   border-radius: 15px;
 }
+
+/* Responsive design */
+
+/* Make sizing predictable */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Desktop and general layout */
+.App {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  gap: 24px;
+}
+
+.add-friend,
+.split-bill {
+  width: 100%;
+  max-width: 500px;
+  min-width: 0;
+}
+
+.split-bill {
+  margin-left: 0;
+}
+
+/* Prevent form fields from overflowing */
+.label {
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.label input,
+.label select {
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .App {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .add-friend,
+  .split-bill {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .App {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .add-friend,
+  .split-bill {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 20px 14px;
+    margin: 0;
+  }
+
+  li {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .button {
+    max-width: 100%;
+  }
+
+  .label {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .label input,
+  .label select {
+    width: 100%;
+    min-height: 40px;
+    font-size: 16px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .App {
+    padding: 10px;
+  }
+
+  .add-friend,
+  .split-bill {
+    padding: 16px 10px;
+  }
+
+  .button {
+    font-size: 14px;
+  }
+}
